@@ -40,8 +40,8 @@ const ContactSection = () => {
   }, []);
 
   const stakeholderTypes = [
-    { value: 'enterprise', label: 'Utility-Scale Solar Operator (Solarad AI)', icon: 'BuildingOffice2Icon' },
-    { value: 'carbon-market', label: 'Carbon Market Participant (CredoCarbon)', icon: 'GlobeAltIcon' },
+    { value: 'Solarad AI', label: 'Utility-Scale Solar Operator (Solarad AI)', icon: 'BuildingOffice2Icon' },
+    { value: 'CredoCarbon', label: 'Carbon Market Participant (CredoCarbon)', icon: 'GlobeAltIcon' },
     { value: 'investor', label: 'Venture Capital / Growth Investor', icon: 'BanknotesIcon' },
     { value: 'research', label: 'Research / Academic Community', icon: 'AcademicCapIcon' },
     { value: 'policy', label: 'Policy / Government Stakeholder', icon: 'BuildingLibraryIcon' },
@@ -96,7 +96,7 @@ const ContactSection = () => {
   // Formspree endpoint mapping based on stakeholder type
   const getFormspreeEndpoint = (stakeholderType: string): string => {
     // Business inquiries: Solarad AI and CredoCarbon
-    const businessStakeholders = ['enterprise', 'carbon-market'];
+    const businessStakeholders = ['Solarad AI', 'CredoCarbon'];
     
     if (businessStakeholders.includes(stakeholderType)) {
       // Routes to haider@solarad.ai for business-critical inquiries

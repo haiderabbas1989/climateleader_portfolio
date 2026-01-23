@@ -19,7 +19,7 @@ const ResearchSection = () => {
       journal: 'Renewable Energy',
       year: '2021',
       citations: 47,
-      url: 'https://scholar.google.com',
+      /*url: 'https://scholar.google.com',*/
       type: 'Journal Article'
     },
     {

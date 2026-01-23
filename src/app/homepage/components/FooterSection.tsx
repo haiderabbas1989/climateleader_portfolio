@@ -27,7 +27,7 @@ const FooterSection = () => {
       title: 'Research',
       links: [
         { label: 'Publications', href: '#research' },
-        { label: 'Google Scholar', href: 'https://scholar.google.com', external: true },
+        { label: 'Google Scholar', href: 'https://scholar.google.com/citations?user=wKW26f0AAAAJ&hl=en', external: true },
         { label: 'Leadership', href: '#leadership' },
         { label: 'Mission', href: '#mission' }
       ]
@@ -43,7 +43,7 @@ const FooterSection = () => {
       title: 'Connect',
       links: [
         { label: 'Contact', href: '#contact' },
-        { label: 'LinkedIn', href: 'https://linkedin.com', external: true }
+        { label: 'LinkedIn', href: 'https://linkedin.com/-haiderabbas', external: true }
       ]
     }
   ];
@@ -141,7 +141,7 @@ const FooterSection = () => {
             </p>
             <div className="flex items-center space-x-6">
               <a
-                href="https://scholar.google.com"
+                href="https://scholar.google.com/citations?user=wKW26f0AAAAJ&hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="opacity-70 hover:opacity-100 transition-opacity duration-300"
@@ -150,7 +150,7 @@ const FooterSection = () => {
                 <Icon name="AcademicCapIcon" size={20} variant="outline" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/-haiderabbas"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="opacity-70 hover:opacity-100 transition-opacity duration-300"
