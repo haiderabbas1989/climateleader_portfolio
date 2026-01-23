@@ -20,7 +20,7 @@ const PlatformSection = () => {
     name: 'Solarad AI',
     tagline: 'Production-Grade Solar Forecasting',
     description: 'Enterprise platform delivering real-time solar power predictions for utility-scale operations. Integrates multiple satellite data sources (EUMETSAT, Himawari, MODIS) with advanced machine learning models to optimize grid integration and energy trading.',
-    logo: "/assets/images/solarad-sun-logo.png",
+    logo: "/assets/images/solarad-logo-only.png",
     logoAlt: 'Solarad AI logo featuring stylized sun rays and data visualization elements in green and blue',
     url: 'https://solarad.ai',
     metrics: [

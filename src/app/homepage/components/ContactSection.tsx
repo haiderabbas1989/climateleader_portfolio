@@ -47,6 +47,12 @@ const ContactSection = () => {
       link: 'tel:+919795119246'
     },
     {
+      icon: 'ChatBubbleLeftRightIcon',
+      label: 'WhatsApp',
+      value: 'Connect via WhatsApp',
+      link: 'https://wa.me/919795119246'
+    },
+    {
       icon: 'MapPinIcon',
       label: 'Location',
       value: 'New Delhi, India | Dubai, United Arab Emirates',
