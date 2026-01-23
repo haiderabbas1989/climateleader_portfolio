@@ -6,7 +6,6 @@ interface Publication {
   authors: string;
   journal: string;
   year: string;
-  citations: number;
   url: string;
   type: string;
 }
@@ -14,48 +13,43 @@ interface Publication {
 const ResearchSection = () => {
   const publications: Publication[] = [
     {
-      title: 'Advanced Machine Learning Approaches for Solar Irradiance Forecasting Using Satellite Data',
-      authors: 'S.H.A. Rizvi, A. Kumar, R. Sharma',
-      journal: 'Renewable Energy',
+      title: 'Validating Meteosat Second Generation and Himawari-8 Derived Solar Irradiance against Ground Measurements: Solarad AI’s Approach',
+      authors: 'Jitendra Kumar Meher, Syed Haider Abbas Rizvi*, Bhramar Choudhary, Ravi Choudhary, Yash Thakre, Ritesh Kumar, and Vikram Singh',
+      journal: 'Energies',
+      year: '2024',
+      url: 'https://doi.org/10.3390/en17122913',
+      type: 'Journal Article'
+    },
+    {
+      title: 'Assessment of Clear-Sky Irradiance from 6S affected by Local Climatology of India',
+      authors: 'Syed Haider Abbas Rizvi, Bhramar Choudhary, Ravi Choudhary, Jitendra Kumar Meher, Nimisha Gupta, Jasvipul Chawla, Mayank Kumar, and Vikram Singh*',
+      journal: 'Journal of Quantitative Spectroscopy and Radiative Transfer',
+      year: '2024',
+      url: 'https://doi.org/10.1016/j.jqsrt.2024.109166',
+      type: 'Journal Article'
+    },
+    {
+      title: 'Assessing Urban Heat Island Intensity and Emissions with Compressed Natural Gas in Non-Commercial Vehicles',
+      authors: 'Syed Haider Abbas Rizvi, Prateek Agrawal, Shivam Batra, Nidhi, and Vikram Singh*',
+      journal: 'Urban Climate',
+      year: '2023',
+      url: 'https://doi.org/10.1016/j.uclim.2023.101421',
+      type: 'Journal Article'
+    },
+    {
+      title: 'Effect of pH and Surfactants on Shear Induced Asphaltene Removal',
+      authors: 'Syed Haider Abbas Rizvi, Shrimali Jonit Bharatbhai, Shivam Gupta, Jyoti Phirani, and Vikram Singh*',
+      journal: 'Journal of Petroleum Science and Engineering',
+      year: '2022',
+      url: 'https://doi.org/10.1016/j.petrol.2022.110134',
+      type: 'Journal Article'
+    },
+    {
+      title: 'Deposition and Removal Studies of Asphaltene from the Glass Surface',
+      authors: 'Syed Haider Abbas Rizvi, Anil Yadav, Jyoti Phirani, and Vikram Singh*',
+      journal: 'Energy & Fuels',
       year: '2021',
-      citations: 47,
-      /*url: 'https://scholar.google.com',*/
-      type: 'Journal Article'
-    },
-    {
-      title: 'Integration of EUMETSAT and Himawari Satellite Data for Real-Time Solar Power Prediction',
-      authors: 'S.H.A. Rizvi, M. Patel, K. Singh',
-      journal: 'Solar Energy',
-      year: '2020',
-      citations: 35,
-      url: 'https://scholar.google.com',
-      type: 'Journal Article'
-    },
-    {
-      title: 'Utility-Scale Solar Forecasting: Challenges and Solutions for Grid Integration',
-      authors: 'S.H.A. Rizvi, D. Gupta',
-      journal: 'IEEE Transactions on Sustainable Energy',
-      year: '2020',
-      citations: 52,
-      url: 'https://scholar.google.com',
-      type: 'Journal Article'
-    },
-    {
-      title: 'Deep Learning Models for Multi-Horizon Solar Power Forecasting in Emerging Markets',
-      authors: 'S.H.A. Rizvi, N. Verma, A. Jain',
-      journal: 'Applied Energy',
-      year: '2019',
-      citations: 41,
-      url: 'https://scholar.google.com',
-      type: 'Journal Article'
-    },
-    {
-      title: 'Climate Data Analytics for Renewable Energy Infrastructure Planning',
-      authors: 'S.H.A. Rizvi, R. Kapoor',
-      journal: 'Energy Policy',
-      year: '2019',
-      citations: 28,
-      url: 'https://scholar.google.com',
+      url: 'https://pubs.acs.org/doi/abs/10.1021/acs.energyfuels.0c03881',
       type: 'Journal Article'
     }
   ];
@@ -135,8 +129,6 @@ const ResearchSection = () => {
                 </div>
                 <div className="flex items-center space-x-4">
                   <div className="text-center">
-                    <p className="text-2xl font-heading font-bold text-primary">{pub.citations}</p>
-                    <p className="text-xs text-text-secondary">Citations</p>
                   </div>
                   <span className="inline-flex items-center px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-semibold">
                     {pub.type}

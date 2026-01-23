@@ -79,12 +79,12 @@ const ContactSection = () => {
     {
       icon: 'AcademicCapIcon',
       label: 'Google Scholar',
-      url: 'https://scholar.google.com'
+      url: 'https://scholar.google.com/citations?user=wKW26f0AAAAJ&hl=en'
     },
     {
       icon: 'UserCircleIcon',
       label: 'LinkedIn',
-      url: 'https://linkedin.com'
+      url: 'https://linkedin.com/-haiderabbas'
     }
   ];
 
