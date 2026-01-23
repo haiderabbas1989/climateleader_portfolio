@@ -23,11 +23,26 @@ const ContactSection = () => {
 
   useEffect(() => {
     setIsHydrated(true);
+    
+    // Load Calendly widget script
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    script.type = 'text/javascript';
+    document.body?.appendChild(script);
+
+    return () => {
+      // Cleanup script on unmount
+      if (document.body?.contains(script)) {
+        document.body?.removeChild(script);
+      }
+    };
   }, []);
 
   const stakeholderTypes = [
+    { value: 'enterprise', label: 'Utility-Scale Solar Operator (Solarad AI)', icon: 'BuildingOffice2Icon' },
+    { value: 'carbon-market', label: 'Carbon Market Participant (CredoCarbon)', icon: 'GlobeAltIcon' },
     { value: 'investor', label: 'Venture Capital / Growth Investor', icon: 'BanknotesIcon' },
-    { value: 'enterprise', label: 'Utility-Scale Solar Operator', icon: 'BuildingOffice2Icon' },
     { value: 'research', label: 'Research / Academic Community', icon: 'AcademicCapIcon' },
     { value: 'policy', label: 'Policy / Government Stakeholder', icon: 'BuildingLibraryIcon' },
     { value: 'other', label: 'Other', icon: 'UserIcon' }
@@ -78,13 +93,31 @@ const ContactSection = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
+  // Formspree endpoint mapping based on stakeholder type
+  const getFormspreeEndpoint = (stakeholderType: string): string => {
+    // Business inquiries: Solarad AI and CredoCarbon
+    const businessStakeholders = ['enterprise', 'carbon-market'];
+    
+    if (businessStakeholders.includes(stakeholderType)) {
+      // Routes to haider@solarad.ai for business-critical inquiries
+      return 'https://formspree.io/f/xvzkbqyn';
+    }
+    
+    // All other stakeholder types route to personal inbox
+    // Routes to haiderabbas1989@gmail.com
+    return 'https://formspree.io/f/mqepbjjo';
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
+    // Get the appropriate Formspree endpoint based on stakeholder type
+    const formspreeEndpoint = getFormspreeEndpoint(formData.stakeholderType);
+
     try {
-      const response = await fetch('https://formspree.io/f/mqepbjjo', {
+      const response = await fetch(formspreeEndpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -128,9 +161,9 @@ const ContactSection = () => {
   }
 
   return (
-    <section id="contact" className="py-24 px-6 bg-surface">
+    <section id="contact" className="py-16 px-6 bg-surface">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-4xl lg:text-5xl font-heading font-bold text-text-primary mb-4">
             Contact Gateway
           </h2>
@@ -139,9 +172,9 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          <div className="space-y-8">
-            <div className="bg-white rounded-xl p-8 border border-border">
+        <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="space-y-6">
+            <div className="bg-white rounded-xl p-6 border border-border">
               <h3 className="text-2xl font-heading font-bold text-text-primary mb-6">
                 Get in Touch
               </h3>
@@ -249,7 +282,7 @@ const ContactSection = () => {
               </form>
             </div>
 
-            <div className="bg-white rounded-xl p-8 border border-border">
+            <div className="bg-white rounded-xl p-6 border border-border">
               <h3 className="text-xl font-heading font-bold text-text-primary mb-6">
                 Direct Contact
               </h3>
@@ -276,28 +309,9 @@ const ContactSection = () => {
                 ))}
               </div>
             </div>
-          </div>
 
-          <div className="space-y-8">
-            <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-xl p-8 border border-primary/10">
-              <h3 className="text-xl font-heading font-bold text-text-primary mb-6">
-                Stakeholder-Specific Engagement
-              </h3>
-              <div className="space-y-4">
-                {stakeholderTypes.map((type, index) => (
-                  <div key={index} className="flex items-start space-x-3 p-4 bg-white rounded-lg">
-                    <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Icon name={type.icon as any} size={18} variant="outline" className="text-primary" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-text-primary">{type.label}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="bg-white rounded-xl p-8 border border-border">
+            {/* Professional Networks - moved below Direct Contact */}
+            <div className="bg-white rounded-xl p-6 border border-border">
               <h3 className="text-xl font-heading font-bold text-text-primary mb-6">
                 Professional Networks
               </h3>
@@ -321,26 +335,115 @@ const ContactSection = () => {
                 ))}
               </div>
             </div>
+          </div>
 
-            <div className="bg-white rounded-xl p-8 border border-border">
-              <h3 className="text-xl font-heading font-bold text-text-primary mb-4">
+          {/* Scheduling + Stakeholder Context (Unified Cluster) */}
+          <div className="space-y-8">
+
+            {/* Unified container for scheduling context */}
+            <div className="rounded-2xl border border-border bg-surface p-4 space-y-6">
+
+              {/* Schedule a Conversation */}
+              <div className="bg-white rounded-xl p-6 border border-border">
+                <div className="flex items-center space-x-3 mb-3">
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Icon
+                      name="CalendarDaysIcon"
+                      size={20}
+                      variant="outline"
+                      className="text-primary"
+                    />
+                  </div>
+                  <h3 className="text-xl font-heading font-bold text-text-primary">
+                    Schedule a Conversation
+                  </h3>
+                </div>
+
+                <p className="text-sm text-text-secondary mb-4">
+                  Prefer a direct discussion? Book a quick call at a time that works for you.
+                </p>
+
+                <div className="bg-surface rounded-lg overflow-hidden border border-border">
+                  <div
+                    className="calendly-inline-widget"
+                    data-url="https://calendly.com/haiderabbas1989/30min"
+                    style={{ minWidth: '320px', height: '360px' }}
+                  />
+                </div>
+              </div>
+              {/* Stakeholder-Specific Engagement (Contextual) */}
+              <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-xl p-5 border border-primary/10">
+                <h3 className="text-lg font-heading font-semibold text-text-primary mb-4">
+                  Stakeholder-Specific Engagement
+                </h3>
+
+                <div className="space-y-2">
+                  {stakeholderTypes.map((type, index) => (
+                    <div
+                      key={index}
+                      className="flex items-center space-x-3 p-3 bg-white rounded-lg"
+                    >
+                      <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Icon
+                          name={type.icon as any}
+                          size={18}
+                          variant="outline"
+                          className="text-primary"
+                        />
+                      </div>
+                      <p className="font-medium text-text-primary">
+                        {type.label}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+            </div>
+            {/* Trust Anchors - moved below Stakeholder-Specific Engagement */}
+            <div className="bg-white rounded-xl p-6 border border-border">
+              <h3 className="text-xl font-heading font-bold text-text-primary mb-5">
                 Trust Anchors
               </h3>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-2 text-text-secondary">
-                  <Icon name="BuildingLibraryIcon" size={18} variant="outline" className="text-primary" />
+
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3 text-text-secondary">
+                  <Icon
+                    name="BuildingLibraryIcon"
+                    size={18}
+                    variant="outline"
+                    className="text-primary"
+                  />
                   <span>IIT Delhi PhD Credentials</span>
                 </div>
-                <div className="flex items-center space-x-2 text-text-secondary">
-                  <Icon name="BuildingOffice2Icon" size={18} variant="outline" className="text-primary" />
+
+                <div className="flex items-center space-x-3 text-text-secondary">
+                  <Icon
+                    name="BuildingOffice2Icon"
+                    size={18}
+                    variant="outline"
+                    className="text-primary"
+                  />
                   <span>ReNew Power Collaboration</span>
                 </div>
-                <div className="flex items-center space-x-2 text-text-secondary">
-                  <Icon name="GlobeAsiaAustraliaIcon" size={18} variant="outline" className="text-primary" />
+
+                <div className="flex items-center space-x-3 text-text-secondary">
+                  <Icon
+                    name="GlobeAsiaAustraliaIcon"
+                    size={18}
+                    variant="outline"
+                    className="text-primary"
+                  />
                   <span>India & Middle East Operations</span>
                 </div>
-                <div className="flex items-center space-x-2 text-text-secondary">
-                  <Icon name="BoltIcon" size={18} variant="outline" className="text-primary" />
+
+                <div className="flex items-center space-x-3 text-text-secondary">
+                  <Icon
+                    name="BoltIcon"
+                    size={18}
+                    variant="outline"
+                    className="text-primary"
+                  />
                   <span>10+ GW Deployed Capacity</span>
                 </div>
               </div>
