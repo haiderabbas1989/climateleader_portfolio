@@ -24,9 +24,9 @@ const PlatformSection = () => {
     logoAlt: 'Solarad AI logo featuring stylized sun rays and data visualization elements in green and blue',
     url: 'https://solarad.ai',
     metrics: [
-    { label: 'Geographies', value: 'India | UAE | KSA', icon: 'BoltIcon' },
-    { label: 'Enterprise Clients', value: '10+ Enterprise Customers', icon: 'BuildingOffice2Icon' },
-    { label: 'Revenue Expansion', value: '$450K+', icon: 'CurrencyDollarIcon' }],
+    { label: 'Solar Capacity', value: '10+ GW', icon: 'BoltIcon' },
+    { label: 'Plants Deployed', value: '100+', icon: 'BuildingOffice2Icon' },
+    { label: 'Annual Impact/100MW', value: '$350K+', icon: 'CurrencyDollarIcon' }],
 
     features: [
     'Real-time solar irradiance forecasting with 95%+ accuracy',
