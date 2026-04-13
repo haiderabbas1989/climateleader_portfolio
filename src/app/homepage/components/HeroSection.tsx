@@ -30,21 +30,21 @@ const HeroSection = ({ onViewWork, onContact }: HeroSectionProps) => {
             <div className="grid grid-cols-3 gap-6 py-8 border-y border-border">
               <div className="space-y-2">
                 <div className="flex items-center space-x-2">
-                  <Icon name="BoltIcon" size={24} variant="solid" className="text-primary" />
+                  <Icon name="BoltIcon" size={18} variant="solid" className="text-primary" />
                   <p className="text-3xl font-heading font-bold text-text-primary">India | UAE | KSA</p>
                 </div>
                 <p className="text-sm text-text-secondary">Geographies</p>
               </div>
               <div className="space-y-2">
                 <div className="flex items-center space-x-2">
-                  <Icon name="BuildingOffice2Icon" size={24} variant="solid" className="text-primary" />
+                  <Icon name="BuildingOffice2Icon" size={18} variant="solid" className="text-primary" />
                   <p className="text-3xl font-heading font-bold text-text-primary">25+ Enterprise Clients</p>
                 </div>
                 <p className="text-sm text-text-secondary">Enterprise Clients</p>
               </div>
               <div className="space-y-2">
                 <div className="flex items-center space-x-2">
-                  <Icon name="CurrencyDollarIcon" size={24} variant="solid" className="text-primary" />
+                  <Icon name="CurrencyDollarIcon" size={18} variant="solid" className="text-primary" />
                   <p className="text-3xl font-heading font-bold text-text-primary">$450K+</p>
                 </div>
                 <p className="text-sm text-text-secondary">Revenue Expansion</p>
