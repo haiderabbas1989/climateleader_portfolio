@@ -27,7 +27,7 @@ const HeroSection = ({ onViewWork, onContact }: HeroSectionProps) => {
               </p>
             </div>
 
-            <div className="grid grid-cols-3 gap-6 py-8 border-y border-border">
+            <div className="grid grid-cols-1 gap-6 py-8 border-y border-border">
               <div className="space-y-2">
                 <div className="flex items-center space-x-2">
                   <Icon name="GlobeAsiaAustraliaIcon" size={24} variant="solid" className="text-primary" />
