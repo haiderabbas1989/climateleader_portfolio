@@ -84,7 +84,7 @@ const ContactSection = () => {
     {
       icon: 'UserCircleIcon',
       label: 'LinkedIn',
-      url: 'https://linkedin.com/-haiderabbas'
+      url: 'https://linkedin.com/in/-haiderabbas'
     }
   ];
 

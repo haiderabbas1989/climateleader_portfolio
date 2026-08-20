@@ -43,7 +43,7 @@ const FooterSection = () => {
       title: 'Connect',
       links: [
         { label: 'Contact', href: '#contact' },
-        { label: 'LinkedIn', href: 'https://linkedin.com/-haiderabbas', external: true }
+        { label: 'LinkedIn', href: 'https://linkedin.com/in/-haiderabbas', external: true }
       ]
     }
   ];
@@ -95,7 +95,7 @@ const FooterSection = () => {
                   />
                 </svg>
               </div>
-              <span className="text-xl font-heading font-bold"></span>
+              <span className="text-xl font-heading font-bold">Dr. Haider Rizvi</span>
             </Link>
             <p className="text-sm opacity-70 leading-relaxed">
               Bridging PhD-level research with utility-scale execution in renewable energy infrastructure.
@@ -150,7 +150,7 @@ const FooterSection = () => {
                 <Icon name="AcademicCapIcon" size={20} variant="outline" />
               </a>
               <a
-                href="https://linkedin.com/-haiderabbas"
+                href="https://linkedin.com/in/-haiderabbas"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="opacity-70 hover:opacity-100 transition-opacity duration-300"
