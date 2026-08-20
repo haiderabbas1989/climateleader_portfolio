@@ -9,6 +9,8 @@ interface HeroSectionProps {
   onContact: () => void;
 }
 
+const RESUME_HREF = '/assets/resume/dr-haider-rizvi-resume.pdf';
+
 const HeroSection = ({ onViewWork, onContact }: HeroSectionProps) => {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-surface via-white to-slate-50 pt-24 pb-16 px-6">
@@ -20,10 +22,10 @@ const HeroSection = ({ onViewWork, onContact }: HeroSectionProps) => {
                 Dr. Syed Haider Abbas Rizvi
               </h1>
               <p className="text-2xl lg:text-3xl font-heading font-semibold text-primary">
-                Climate-Tech Founder & Research Leader
+                Strategy & Business Operations Leader | Applied Research to Commercial Execution
               </p>
               <p className="text-lg text-text-secondary leading-relaxed max-w-2xl">
-                Bridging PhD-level research with utility-scale execution. Translating cutting-edge climate science into production-grade infrastructure across emerging markets.
+                Strategy and operations leader with 4 years building and scaling Solarad AI, preceded by 6 years of industry-funded PhD research with ReNew Power — diagnosing a 10% power-loss problem for India's largest renewable energy company and leading a research programme generating USD 35M+ commercial impact.
               </p>
             </div>
 
@@ -31,23 +33,23 @@ const HeroSection = ({ onViewWork, onContact }: HeroSectionProps) => {
               <div className="space-y-2">
                 <div className="flex items-center space-x-2">
                   <Icon name="GlobeAsiaAustraliaIcon" size={24} variant="solid" className="text-primary" />
-                  <p className="text-2xl font-heading font-bold text-text-primary">India | UAE | KSA</p>
+                  <p className="text-2xl font-heading font-bold text-text-primary">6 Countries</p>
                 </div>
-                <p className="text-sm text-text-secondary">Geographies</p>
+                <p className="text-sm text-text-secondary">Market Expansion</p>
               </div>
               <div className="space-y-2">
                 <div className="flex items-center space-x-2">
                   <Icon name="BuildingOffice2Icon" size={24} variant="solid" className="text-primary" />
-                  <p className="text-2xl font-heading font-bold text-text-primary">25+ Enterprise Clients</p>
+                  <p className="text-2xl font-heading font-bold text-text-primary">100+ Plants (~10 GW)</p>
                 </div>
-                <p className="text-sm text-text-secondary">Enterprise Clients</p>
+                <p className="text-sm text-text-secondary">Deployed Capacity</p>
               </div>
               <div className="space-y-2">
                 <div className="flex items-center space-x-2">
                   <Icon name="CurrencyDollarIcon" size={24} variant="solid" className="text-primary" />
-                  <p className="text-2xl font-heading font-bold text-text-primary">$450K+</p>
+                  <p className="text-2xl font-heading font-bold text-text-primary">USD 35M+</p>
                 </div>
-                <p className="text-sm text-text-secondary">Revenue Expansion</p>
+                <p className="text-sm text-text-secondary">Research Impact</p>
               </div>
             </div>
 
@@ -56,16 +58,18 @@ const HeroSection = ({ onViewWork, onContact }: HeroSectionProps) => {
                 onClick={onViewWork}
                 className="px-8 py-4 bg-primary text-primary-foreground rounded-lg text-base font-heading font-semibold transition-all duration-300 hover:bg-primary/90 hover:shadow-lg hover:-translate-y-0.5 flex items-center space-x-2">
 
-                <span>View Work</span>
+                <span>View Experience</span>
                 <Icon name="ArrowRightIcon" size={20} variant="outline" />
               </button>
-              <button
-                onClick={onContact}
+              <a
+                href={RESUME_HREF}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-8 py-4 bg-white text-primary border-2 border-primary rounded-lg text-base font-heading font-semibold transition-all duration-300 hover:bg-surface hover:shadow-lg hover:-translate-y-0.5 flex items-center space-x-2">
 
-                <span>Contact</span>
-                <Icon name="EnvelopeIcon" size={20} variant="outline" />
-              </button>
+                <span>Download Resume</span>
+                <Icon name="ArrowDownTrayIcon" size={20} variant="outline" />
+              </a>
             </div>
           </div>
 

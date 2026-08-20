@@ -13,10 +13,12 @@ const Header = ({ className = '' }: HeaderProps) => {
 
   const navigationItems = [
     { label: 'Home', href: '/homepage', icon: 'HomeIcon' },
+    { label: 'Experience', href: '/homepage#experience', icon: 'BriefcaseIcon' },
     { label: 'Research', href: '/homepage#research', icon: 'AcademicCapIcon' },
-    { label: 'Platforms', href: '/homepage#platforms', icon: 'CubeIcon' },
     { label: 'Contact', href: '/homepage#contact', icon: 'EnvelopeIcon' },
   ];
+
+  const resumeHref = '/assets/resume/dr-haider-rizvi-resume.pdf';
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -68,6 +70,14 @@ const Header = ({ className = '' }: HeaderProps) => {
           </nav>
 
           <div className="hidden md:flex items-center space-x-3">
+            <a
+              href={resumeHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-2 bg-white text-primary border-2 border-primary rounded-md text-sm font-heading font-semibold transition-all duration-300 hover:bg-surface"
+            >
+              Resume
+            </a>
             <Link
               href="/homepage#contact"
               className="px-5 py-2 bg-primary text-primary-foreground rounded-md text-sm font-heading font-semibold transition-all duration-300 hover:bg-primary/90 hover:shadow-card hover:-translate-y-0.5"
@@ -104,7 +114,16 @@ const Header = ({ className = '' }: HeaderProps) => {
                 <span>{item.label}</span>
               </Link>
             ))}
-            <div className="pt-4 border-t border-border">
+            <div className="pt-4 border-t border-border space-y-2">
+              <a
+                href={resumeHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="flex items-center justify-center w-full px-5 py-3 bg-white text-primary border-2 border-primary rounded-md text-base font-heading font-semibold transition-all duration-300 hover:bg-surface"
+              >
+                Resume
+              </a>
               <Link
                 href="/homepage#contact"
                 onClick={() => setIsMobileMenuOpen(false)}

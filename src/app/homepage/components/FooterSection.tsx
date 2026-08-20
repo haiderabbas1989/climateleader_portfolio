@@ -18,32 +18,25 @@ const FooterSection = () => {
       title: 'Navigation',
       links: [
         { label: 'About', href: '#about' },
-        { label: 'Education', href: '#education' },
         { label: 'Experience', href: '#experience' },
-        { label: 'Platforms', href: '#platforms' }
+        { label: 'Education', href: '#education' },
+        { label: 'Research', href: '#research' }
       ]
     },
     {
-      title: 'Research',
+      title: 'Leadership',
       links: [
-        { label: 'Publications', href: '#research' },
-        { label: 'Google Scholar', href: 'https://scholar.google.com/citations?user=wKW26f0AAAAJ&hl=en', external: true },
-        { label: 'Leadership', href: '#leadership' },
-        { label: 'Mission', href: '#mission' }
-      ]
-    },
-    {
-      title: 'Platforms',
-      links: [
-        { label: 'Solarad AI', href: 'https://solarad.ai', external: true },
-        { label: 'CredoCarbon', href: 'https://credocarbon.com', external: true }
+        { label: 'Capabilities', href: '#leadership' },
+        { label: 'What I\'m Looking For', href: '#mission' },
+        { label: 'Google Scholar', href: 'https://scholar.google.com/citations?user=wKW26f0AAAAJ&hl=en', external: true }
       ]
     },
     {
       title: 'Connect',
       links: [
         { label: 'Contact', href: '#contact' },
-        { label: 'LinkedIn', href: 'https://linkedin.com/in/-haiderabbas', external: true }
+        { label: 'LinkedIn', href: 'https://linkedin.com/in/-haiderabbas', external: true },
+        { label: 'Resume', href: '/assets/resume/dr-haider-rizvi-resume.pdf', external: true }
       ]
     }
   ];
@@ -73,7 +66,7 @@ const FooterSection = () => {
   return (
     <footer className="bg-text-primary text-white py-16 px-6">
       <div className="container mx-auto max-w-7xl">
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div className="lg:col-span-1">
             <Link href="/homepage" className="flex items-center space-x-3 mb-4">
               <div className="flex items-center justify-center w-10 h-10 bg-primary rounded-lg">
@@ -98,7 +91,7 @@ const FooterSection = () => {
               <span className="text-xl font-heading font-bold">Dr. Haider Rizvi</span>
             </Link>
             <p className="text-sm opacity-70 leading-relaxed">
-              Bridging PhD-level research with utility-scale execution in renewable energy infrastructure.
+              Strategy & Business Operations Leader | Applied Research to Commercial Execution.
             </p>
           </div>
 

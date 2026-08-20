@@ -40,11 +40,9 @@ const ContactSection = () => {
   }, []);
 
   const stakeholderTypes = [
-    { value: 'Solarad AI', label: 'Utility-Scale Solar Operator (Solarad AI)', icon: 'BuildingOffice2Icon' },
-    { value: 'CredoCarbon', label: 'Carbon Market Participant (CredoCarbon)', icon: 'GlobeAltIcon' },
-    { value: 'investor', label: 'Venture Capital / Growth Investor', icon: 'BanknotesIcon' },
+    { value: 'hiring', label: 'Hiring Manager / Recruiter', icon: 'BriefcaseIcon' },
+    { value: 'networking', label: 'Professional Networking', icon: 'UsersIcon' },
     { value: 'research', label: 'Research / Academic Community', icon: 'AcademicCapIcon' },
-    { value: 'policy', label: 'Policy / Government Stakeholder', icon: 'BuildingLibraryIcon' },
     { value: 'other', label: 'Other', icon: 'UserIcon' }
   ];
 
@@ -93,31 +91,16 @@ const ContactSection = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  // Formspree endpoint mapping based on stakeholder type
-  const getFormspreeEndpoint = (stakeholderType: string): string => {
-    // Business inquiries: Solarad AI and CredoCarbon
-    const businessStakeholders = ['Solarad AI', 'CredoCarbon'];
-    
-    if (businessStakeholders.includes(stakeholderType)) {
-      // Routes to haider@solarad.ai for business-critical inquiries
-      return 'https://formspree.io/f/xvzkbqyn';
-    }
-    
-    // All other stakeholder types route to personal inbox
-    // Routes to haiderabbas1989@gmail.com
-    return 'https://formspree.io/f/mqepbjjo';
-  };
+  // Routes all inquiries to the personal inbox (haiderabbas1989@gmail.com)
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mqepbjjo';
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
-    // Get the appropriate Formspree endpoint based on stakeholder type
-    const formspreeEndpoint = getFormspreeEndpoint(formData.stakeholderType);
-
     try {
-      const response = await fetch(formspreeEndpoint, {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -168,7 +151,7 @@ const ContactSection = () => {
             Contact Gateway
           </h2>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto">
-            Multiple touchpoints optimized for different stakeholder types—investors, enterprise clients, research community, and policy makers.
+            Multiple touchpoints optimized for different stakeholder types—hiring managers, professional connections, and the research community.
           </p>
         </div>
 
@@ -244,7 +227,7 @@ const ContactSection = () => {
                     required
                     rows={5}
                     className="w-full px-4 py-3 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 resize-none"
-                    placeholder="Tell us about your interest in collaboration, investment, or partnership opportunities..."
+                    placeholder="Tell me about the role, opportunity, or how I can help..."
                   />
                 </div>
 
@@ -308,6 +291,15 @@ const ContactSection = () => {
                   </div>
                 ))}
               </div>
+              <a
+                href="/assets/resume/dr-haider-rizvi-resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 flex items-center justify-center space-x-2 w-full px-5 py-3 bg-primary text-primary-foreground rounded-lg font-heading font-semibold transition-all duration-300 hover:bg-primary/90"
+              >
+                <span>Download Resume</span>
+                <Icon name="ArrowDownTrayIcon" size={18} variant="outline" />
+              </a>
             </div>
 
             {/* Professional Networks - moved below Direct Contact */}
@@ -414,17 +406,17 @@ const ContactSection = () => {
                     variant="outline"
                     className="text-primary"
                   />
-                  <span>IIT Delhi PhD Credentials</span>
+                  <span>IIT Delhi PhD (Solar Aerosol Science)</span>
                 </div>
 
                 <div className="flex items-center space-x-3 text-text-secondary">
                   <Icon
-                    name="BuildingOffice2Icon"
+                    name="CurrencyDollarIcon"
                     size={18}
                     variant="outline"
                     className="text-primary"
                   />
-                  <span>ReNew Power Collaboration</span>
+                  <span>USD 35M+ Research Impact</span>
                 </div>
 
                 <div className="flex items-center space-x-3 text-text-secondary">
@@ -434,17 +426,17 @@ const ContactSection = () => {
                     variant="outline"
                     className="text-primary"
                   />
-                  <span>India & Middle East Operations</span>
+                  <span>6-Country Market Expansion</span>
                 </div>
 
                 <div className="flex items-center space-x-3 text-text-secondary">
                   <Icon
-                    name="BoltIcon"
+                    name="BuildingOffice2Icon"
                     size={18}
                     variant="outline"
                     className="text-primary"
                   />
-                  <span>10+ GW Deployed Capacity</span>
+                  <span>100+ Plants Deployed (~10 GW)</span>
                 </div>
               </div>
             </div>

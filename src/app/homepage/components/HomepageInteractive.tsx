@@ -5,10 +5,9 @@ import HeroSection from './HeroSection';
 import AboutSection from './AboutSection';
 import EducationSection from './EducationSection';
 import ExperienceSection from './ExperienceSection';
-import PlatformSection from './PlatformSection';
 import ResearchSection from './ResearchSection';
 import LeadershipSection from './LeadershipSection';
-import MissionSection from './MissionSection';
+import LookingForNextSection from './LookingForNextSection';
 import ContactSection from './ContactSection';
 import FooterSection from './FooterSection';
 
@@ -27,7 +26,7 @@ const HomepageInteractive = () => {
   };
 
   const handleViewWork = () => {
-    scrollToSection('platforms');
+    scrollToSection('experience');
   };
 
   const handleContact = () => {
@@ -54,10 +53,9 @@ const HomepageInteractive = () => {
       <AboutSection />
       <EducationSection />
       <ExperienceSection />
-      <PlatformSection />
       <ResearchSection />
       <LeadershipSection />
-      <MissionSection />
+      <LookingForNextSection />
       <ContactSection />
       <FooterSection />
     </div>

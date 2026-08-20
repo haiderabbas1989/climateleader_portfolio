@@ -7,64 +7,74 @@ interface Capability {
   skills: string[];
 }
 
+interface Recognition {
+  title: string;
+  description: string;
+  icon: string;
+}
+
 const LeadershipSection = () => {
   const capabilities: Capability[] = [
     {
-      category: 'Technical Leadership',
-      icon: 'CpuChipIcon',
-      skills: [
-        'Production-grade system architecture and deployment',
-        'Multi-satellite data integration (EUMETSAT, Himawari, MODIS)',
-        'Machine learning model development and optimization',
-        'Real-time forecasting system design and scaling',
-        'API development and enterprise integration'
-      ]
-    },
-    {
-      category: 'Operational Excellence',
-      icon: 'ChartBarIcon',
-      skills: [
-        'Utility-scale infrastructure deployment (10+ GW)',
-        'Cross-functional team leadership and coordination',
-        'Multi-region operations (India & Middle East)',
-        'Enterprise client relationship management',
-        'Performance optimization and impact measurement'
-      ]
-    },
-    {
-      category: 'Strategic Execution',
+      category: 'Strategic & Operational Leadership',
       icon: 'LightBulbIcon',
       skills: [
-        'Research-to-product translation and commercialization',
-        'Market entry strategy for emerging economies',
-        'Stakeholder engagement (investors, clients, policy makers)',
-        'Platform scaling and growth strategy',
-        'Partnership development and ecosystem building'
+        'Root-cause analysis',
+        'Business operations & process design',
+        'Program & delivery management',
+        'OKR frameworks',
+        'Organizational scaling'
       ]
     },
     {
-      category: 'Domain Expertise',
+      category: 'Financial Ownership',
+      icon: 'BanknotesIcon',
+      skills: [
+        'P&L management',
+        'Unit economics (CAC/LTV/payback)',
+        'Pricing strategy',
+        'Cash-flow management',
+        'Budget planning'
+      ]
+    },
+    {
+      category: 'Market & Commercial Strategy',
       icon: 'GlobeAsiaAustraliaIcon',
       skills: [
-        'Renewable energy forecasting and grid integration',
-        'Climate data analytics and satellite remote sensing',
-        'Carbon credit systems and sustainability metrics',
-        'Energy trading and market optimization',
-        'Emerging market infrastructure challenges'
+        'Market-entry & expansion strategy',
+        'Commercial strategy & pricing',
+        'Stakeholder & account management',
+        'C-suite/VP contract negotiation'
+      ]
+    },
+    {
+      category: 'Applied Research & Technical Depth',
+      icon: 'CpuChipIcon',
+      skills: [
+        'Applied research design',
+        'Technical due diligence',
+        'Satellite data analytics',
+        'Solar irradiance forecasting',
+        'Technical writing'
       ]
     }
   ];
 
-  const geographicReach = [
+  const recognitions: Recognition[] = [
     {
-      region: 'India',
-      icon: 'MapPinIcon',
-      highlights: ['100+ solar plants deployed', '8+ GW capacity managed', 'Multiple state operations']
+      title: 'President, PG Academic and Co-Curricular Council, IIT Delhi (2019-20)',
+      description: 'Launched IIT Delhi\'s first Research Scholars\' Day; led a 16-member team; secured sponsorship from Honeywell and Shell.',
+      icon: 'TrophyIcon'
     },
     {
-      region: 'Middle East',
-      icon: 'MapPinIcon',
-      highlights: ['2+ GW capacity served', 'Enterprise partnerships', 'Regional expansion ongoing']
+      title: 'Best Secretary Award, Board of Hostel Management, IIT Delhi (2018-19)',
+      description: 'Achieved lowest per-capita hostel costs among 13 hostels; increased resident participation by 40%; negotiated a 50% wage increase for support staff.',
+      icon: 'StarIcon'
+    },
+    {
+      title: 'Gold Medal, Inter-IIT Snooker Championship (2017)',
+      description: 'Gold Medal, Inter-school Badminton (2008).',
+      icon: 'TrophyIcon'
     }
   ];
 
@@ -106,29 +116,36 @@ const LeadershipSection = () => {
           ))}
         </div>
 
-        <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-2xl p-8 lg:p-12 border border-primary/10">
+        <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-2xl p-8 lg:p-12 border border-primary/10 mb-16">
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center mx-auto mb-4 shadow-sm">
+              <Icon name="MapPinIcon" size={28} variant="solid" className="text-primary" />
+            </div>
+            <h3 className="text-2xl font-heading font-bold text-text-primary mb-2">
+              6-Country Footprint
+            </h3>
+            <p className="text-lg text-text-secondary">
+              India, UAE, Saudi Arabia, and beyond. Middle East grew from 0% to 40% of company revenue in 18 months.
+            </p>
+          </div>
+        </div>
+
+        <div>
           <h3 className="text-2xl font-heading font-bold text-text-primary mb-8 text-center">
-            Geographic Deployment Proof
+            Leadership & Recognition
           </h3>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {geographicReach.map((geo, index) => (
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {recognitions.map((item, index) => (
               <div key={index} className="bg-white rounded-xl p-6 border border-border">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <Icon name={geo.icon as any} size={20} variant="solid" className="text-primary" />
-                  </div>
-                  <h4 className="text-xl font-heading font-bold text-text-primary">
-                    {geo.region}
-                  </h4>
+                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                  <Icon name={item.icon as any} size={20} variant="solid" className="text-primary" />
                 </div>
-                <ul className="space-y-2">
-                  {geo.highlights.map((highlight, idx) => (
-                    <li key={idx} className="flex items-start space-x-2">
-                      <Icon name="ArrowRightIcon" size={16} variant="outline" className="text-primary flex-shrink-0 mt-1" />
-                      <span className="text-text-secondary">{highlight}</span>
-                    </li>
-                  ))}
-                </ul>
+                <h4 className="text-base font-heading font-semibold text-text-primary mb-2">
+                  {item.title}
+                </h4>
+                <p className="text-sm text-text-secondary leading-relaxed">
+                  {item.description}
+                </p>
               </div>
             ))}
           </div>

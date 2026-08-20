@@ -85,7 +85,7 @@ const ResearchSection = () => {
             Research Authority
           </h2>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto">
-            Peer-reviewed publications establishing scientific credibility and technical depth in renewable energy systems.
+            5 peer-reviewed publications (2021-2024) establishing scientific credibility and technical depth in renewable energy systems.
           </p>
         </div>
 

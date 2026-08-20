@@ -16,49 +16,60 @@ interface Experience {
 const ExperienceSection = () => {
   const experiences: Experience[] = [
     {
-      title: 'Co-Founder & Chief Executive Officer',
+      title: 'Co-Founder & Chief Operating Officer (progressed to CEO, Apr 2025)',
       company: 'Solarad AI',
-      location: 'India & Middle East',
-      period: '2022 - Present',
-      type: 'Climate-Tech Platform',
+      location: 'Delhi NCR & Middle East',
+      period: 'Jul 2022 - Present',
+      type: 'Strategy & Operations',
       achievements: [
-        'Built production-grade solar forecasting platform serving 10+ GW capacity across 100+ utility-scale plants',
-        'Integrated EUMETSAT, Himawari, and MODIS satellite data for real-time renewable energy predictions',
-        'Delivered USD 350K+ annual impact per 100 MW plant through optimized grid integration',
-        'Established operational presence across India and Middle East emerging markets',
-        'Led cross-functional teams spanning data science, engineering, and commercial operations'
+        'Designed and led Middle East market-entry strategy from the ground up — growing the region from 0% to 40% of company revenue within 18 months',
+        'Built Solarad AI\'s full commercial operating system — GTM playbooks, client onboarding, CRM/revenue-ops infrastructure (Salesforce, HubSpot, Pipedrive) — sustaining 95%+ customer satisfaction and 90%+ renewal rates',
+        'Owned P&L and financial strategy — unit economics, pricing design (+20% margin improvement), and 12+ months cash-runway management',
+        'Led fundraising end-to-end, closing USD 450K in seed funding with institutional investors',
+        'Built and led a cross-functional team of 11 across data science, engineering, and operations, sustaining under 10% annual attrition',
+        'Served as primary escalation and governance owner across enterprise accounts including Masdar, ACWA Power, Layla Solar Energy Company, Tata Power, Adani Power, Marubeni, ReNew Power, Jio Platforms, Jakson Green, Ayana Power, Zelestra Energy, South Rabigh Renewable Energy Company, TotalEnergies, ACME Power, and EDF Renewables'
       ],
-      icon: 'SunIcon'
+      icon: 'BriefcaseIcon'
     },
     {
-      title: 'Founder',
-      company: 'CredoCarbon',
-      location: 'Dubai',
-      period: '2026 - Present',
-      type: 'Carbon Credit Platform',
+      title: 'Research Lead – Industry Partnerships',
+      company: 'ReNew Power Centre of Excellence, IIT Delhi',
+      location: 'New Delhi',
+      period: 'Jan 2021 - Jun 2022',
+      type: 'Applied Research',
       achievements: [
-        'Developed enterprise carbon credit management and trading platform',
-        'Built technical infrastructure for carbon footprint measurement and verification',
-        'Designed scalable architecture supporting multiple industry verticals',
-        'Established partnerships with corporate sustainability teams and verification bodies',
-        'Led product development from research prototype to commercial deployment'
-      ],
-      icon: 'CloudIcon'
-    },
-    {
-      title: 'Senior Research Scientist',
-      company: 'ReNew Power (Collaboration)',
-      location: 'India',
-      period: '2021 - 2022',
-      type: 'Utility-Scale Research',
-      achievements: [
-        'Conducted applied research on renewable energy forecasting for utility-scale deployments',
-        'Developed machine learning models for solar and wind power prediction',
-        'Collaborated with operations teams to translate research into production systems',
-        'Published peer-reviewed papers on renewable energy integration challenges',
-        'Contributed to grid stability and energy trading optimization strategies'
+        'Identified the root cause of ~10% monthly power loss from dust deposition through structured root-cause analysis; findings directly informed client capital allocation decisions',
+        'Owned end-to-end delivery of a research programme generating USD 350K impact per 100MW plant, delivered 100% on-time',
+        'Drove institutional adoption through structured knowledge transfer, training, and governance reporting',
+        'Served as primary client-facing lead with ReNew Power\'s executive team'
       ],
       icon: 'BeakerIcon'
+    },
+    {
+      title: 'Industry Research Programme Lead & Laboratory Incharge',
+      company: 'IIT Delhi',
+      location: 'New Delhi',
+      period: 'Jan 2016 - Dec 2020',
+      type: 'Applied Research',
+      achievements: [
+        'Secured and led an industry-sponsored research collaboration with ReNew Power generating USD 35M+ commercial impact',
+        'Led a cross-functional team of 8 across academia and industry',
+        'Built the Complex Fluid Laboratory from scratch within a USD 255K capital budget',
+        'Mentored 6 Master\'s students across 4 research projects; produced 5 peer-reviewed publications (2021-2024)'
+      ],
+      icon: 'BeakerIcon'
+    },
+    {
+      title: 'Visiting Professor',
+      company: 'Harcourt Butler Technological Institute',
+      location: 'Kanpur',
+      period: 'Jul 2013 - Dec 2015',
+      type: 'Academia',
+      achievements: [
+        'Designed and delivered undergraduate chemical engineering curriculum',
+        'Mentored 4 cohorts (40+ students) on technical research and professional development'
+      ],
+      icon: 'AcademicCapIcon'
     }
   ];
 
@@ -67,10 +78,10 @@ const ExperienceSection = () => {
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-heading font-bold text-text-primary mb-4">
-            Operational Track Record
+            Experience
           </h2>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto">
-            Progression from research to scale, demonstrating consistent delivery of production-grade climate infrastructure.
+            Progression from applied research to commercial operating leadership, building the systems that turn a well-defined problem into a repeatable result.
           </p>
         </div>
 
@@ -124,6 +135,12 @@ const ExperienceSection = () => {
               </div>
             </div>
           ))}
+
+          <div className="bg-surface/60 rounded-xl px-6 py-4 border border-dashed border-border">
+            <p className="text-sm text-text-secondary leading-relaxed">
+              <span className="font-semibold text-text-primary">Also exploring:</span> CredoCarbon, an early-stage carbon-credit concept, on a part-time basis. Not currently a full-time focus — open to pursuing further if market traction strengthens.
+            </p>
+          </div>
         </div>
       </div>
     </section>

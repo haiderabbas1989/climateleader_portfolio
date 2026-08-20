@@ -13,28 +13,20 @@ interface Education {
 const EducationSection = () => {
   const education: Education[] = [
     {
-      degree: 'Doctor of Philosophy (PhD)',
+      degree: 'Ph.D., Chemical Engineering',
       institution: 'Indian Institute of Technology Delhi',
       location: 'New Delhi, India',
-      year: '2016 - 2022',
-      focus: 'Renewable Energy Systems',
+      year: '2022',
+      focus: 'Solar aerosol science. GPA 8.2/10. Thesis: "Removal of Colloidal Asphaltene from Surfaces and Effect of Aerosols on Solar Power"',
       icon: 'AcademicCapIcon'
     },
     {
-      degree: 'Master of Technology (M.Tech)',
+      degree: 'M.Tech. & B.Tech., Chemical Engineering',
       institution: 'Harcourt Butler Technological Institute',
       location: 'Kanpur, India',
-      year: '2011 - 2013',
+      year: '2013',
       focus: 'Chemical Engineering',
       icon: 'BeakerIcon'
-    },
-    {
-      degree: 'Bachelor of Technology (B.Tech)',
-      institution: 'Harcourt Butler Technological Institute',
-      location: 'Kanpur, India',
-      year: '2007 - 2011',
-      focus: 'Chemical Engineering',
-      icon: 'BoltIcon'
     }
   ];
 

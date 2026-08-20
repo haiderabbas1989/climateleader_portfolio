@@ -5,23 +5,23 @@ const AboutSection = () => {
   const highlights = [
     {
       icon: 'AcademicCapIcon',
-      title: 'Research Foundation',
-      description: 'PhD from IIT Delhi with focus on renewable energy forecasting and climate data analytics'
+      title: 'Applied Research Foundation',
+      description: 'PhD in solar aerosol science (IIT Delhi); diagnosed a 10% power-loss problem for India\'s largest renewable energy company, generating USD 35M+ in commercial impact.'
     },
     {
       icon: 'ChartBarIcon',
-      title: 'Commercial Scale',
-      description: 'Deployed solutions across 10+ GW capacity serving 100+ utility-scale solar plants'
+      title: 'Operating Leadership',
+      description: 'Built Solarad AI\'s entire commercial operating system from zero: GTM, delivery, CRM/revenue operations, and financial planning.'
     },
     {
       icon: 'GlobeAsiaAustraliaIcon',
-      title: 'Emerging Markets',
-      description: 'Deep operational expertise across India and Middle East renewable infrastructure'
+      title: 'Market Expansion',
+      description: 'Led Middle East market-entry strategy from the ground up, growing the region from 0% to 40% of company revenue in 18 months.'
     },
     {
-      icon: 'CpuChipIcon',
-      title: 'Technical Depth',
-      description: 'Production-grade systems integrating EUMETSAT, Himawari, and MODIS satellite data'
+      icon: 'BanknotesIcon',
+      title: 'Financial & Team Ownership',
+      description: 'Owned full P&L, unit economics, and pricing strategy (+20% margin improvement); built and led an 11-person cross-functional team with under 10% annual attrition.'
     }
   ];
 
@@ -30,10 +30,10 @@ const AboutSection = () => {
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-heading font-bold text-text-primary mb-4">
-            Research Meets Execution
+            From Research Problem to Commercial Scale
           </h2>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto">
-            A rare combination of PhD-level technical depth and proven commercial scale, translating cutting-edge climate science into real-world infrastructure impact.
+            A strategy and operations leader who defines problems rigorously, then builds the system to solve them — proven across both applied research and commercial execution.
           </p>
         </div>
 
@@ -59,13 +59,13 @@ const AboutSection = () => {
         <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-2xl p-8 lg:p-12 border border-primary/10">
           <div className="max-w-4xl mx-auto space-y-6">
             <p className="text-lg text-text-primary leading-relaxed">
-              Dr. Syed Haider Abbas Rizvi represents the new generation of climate leaders who don't just publish papers—they deploy solutions at utility scale. With a foundation in rigorous academic research from IIT Delhi, he has translated theoretical advances into production-grade systems serving over 10 GW of solar capacity across India and the Middle East.
+              Dr. Syed Haider Abbas Rizvi is a strategy and operations leader who builds the systems that turn research into results. With a PhD in solar aerosol science from IIT Delhi, he began his career solving a concrete, high-stakes problem: diagnosing a 10% power-loss issue for ReNew Power, India's largest renewable energy company, through a research programme that went on to generate USD 35M+ in commercial impact.
             </p>
             <p className="text-lg text-text-primary leading-relaxed">
-              His work bridges the critical gap between what's possible in research labs and what's profitable in the field. This unique positioning enables him to speak fluently to research committees, boardrooms, and policy makers—bringing scientific rigor to commercial execution and operational discipline to academic innovation.
+              That same approach — define the problem rigorously, then build the framework to solve it — carried into building Solarad AI's entire operating engine from the ground up: go-to-market systems, delivery infrastructure, CRM and revenue operations, and financial planning. As Co-Founder & COO (later CEO), he led the company's Middle East market-entry strategy, growing the region from 0% to 40% of total revenue within 18 months, while owning P&L, pricing strategy, and a growing cross-functional team.
             </p>
             <p className="text-lg text-text-primary leading-relaxed">
-              The brand embodies credible climate action: moving beyond promises to proven results, from experimental concepts to enterprise-scale infrastructure, from theoretical models to systems generating USD 350K+ annual impact per 100 MW plant.
+              The throughline across research and operations is the same: rigorous problem definition, disciplined execution, and a bias toward building repeatable systems rather than one-off wins.
             </p>
           </div>
         </div>
