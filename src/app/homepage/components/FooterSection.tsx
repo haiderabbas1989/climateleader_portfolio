@@ -50,7 +50,7 @@ const FooterSection = () => {
   };
 
   return (
-    <footer className="bg-text-primary text-white py-16 px-6">
+    <footer className="bg-text-primary text-white py-10 lg:py-16">
       <div className="container mx-auto max-w-7xl">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div className="lg:col-span-1">
@@ -74,7 +74,7 @@ const FooterSection = () => {
                   />
                 </svg>
               </div>
-              <span className="text-xl font-heading font-bold">Dr. Haider Rizvi</span>
+              <span className="text-xl font-heading font-bold">Dr. Haider Abbas</span>
             </Link>
             <p className="text-sm opacity-70 leading-relaxed">
               Strategy & Business Operations Leader | Applied Research to Commercial Execution.

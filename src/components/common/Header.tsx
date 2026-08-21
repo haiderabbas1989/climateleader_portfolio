@@ -51,7 +51,7 @@ const Header = ({ className = '' }: HeaderProps) => {
               </svg>
             </div>
             <span className="text-xl font-heading font-bold text-text-primary">
-              Dr. Haider Rizvi
+              Dr. Haider Abbas
             </span>
           </Link>
 

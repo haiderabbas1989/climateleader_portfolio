@@ -24,7 +24,7 @@ const LookingForNextSection = () => {
   ];
 
   return (
-    <section id="mission" className="py-24 px-6 bg-white">
+    <section id="mission" className="py-12 lg:py-24 bg-white">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-heading font-bold text-text-primary mb-4">

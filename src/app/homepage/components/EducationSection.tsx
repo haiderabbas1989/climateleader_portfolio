@@ -21,17 +21,25 @@ const EducationSection = () => {
       icon: 'AcademicCapIcon'
     },
     {
-      degree: 'M.Tech. & B.Tech., Chemical Engineering',
+      degree: 'M.Tech., Chemical Engineering',
       institution: 'Harcourt Butler Technological Institute',
       location: 'Kanpur, India',
-      year: '2013',
+      year: '2011 - 2013',
+      focus: 'Chemical Engineering',
+      icon: 'BeakerIcon'
+    },
+    {
+      degree: 'B.Tech., Chemical Engineering',
+      institution: 'Harcourt Butler Technological Institute',
+      location: 'Kanpur, India',
+      year: '2007 - 2011',
       focus: 'Chemical Engineering',
       icon: 'BeakerIcon'
     }
   ];
 
   return (
-    <section id="education" className="py-24 px-6 bg-surface">
+    <section id="education" className="py-12 lg:py-24 bg-surface">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-heading font-bold text-text-primary mb-4">
@@ -59,7 +67,7 @@ const EducationSection = () => {
                     <h3 className="text-2xl font-heading font-bold text-text-primary">
                       {edu.degree}
                     </h3>
-                    <span className="inline-flex items-center px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">
+                    <span className="inline-flex items-center px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold whitespace-nowrap">
                       {edu.year}
                     </span>
                   </div>

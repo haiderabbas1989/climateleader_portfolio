@@ -48,8 +48,8 @@ const ContactSection = () => {
     {
       icon: 'EnvelopeIcon',
       label: 'Email',
-      value: 'haider@solarad.ai, haider@credocarbon.com',
-      link: 'mailto:haider@solarad.ai'
+      value: 'haiderabbas1989@gmail.com',
+      link: 'mailto:haiderabbas1989@gmail.com'
     },
     {
       icon: 'PhoneIcon',
@@ -125,7 +125,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-16 px-6 bg-surface">
+    <section id="contact" className="py-10 lg:py-16 bg-surface">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12">
           <h2 className="text-4xl lg:text-5xl font-heading font-bold text-text-primary mb-4">
@@ -338,7 +338,7 @@ const ContactSection = () => {
                   <div
                     className="calendly-inline-widget"
                     data-url="https://calendly.com/haiderabbas1989/30min"
-                    style={{ minWidth: '320px', height: '360px' }}
+                    style={{ minWidth: 'min(320px, 100%)', height: '360px' }}
                   />
                 </div>
               </div>

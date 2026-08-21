@@ -74,7 +74,7 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <section id="experience" className="py-24 px-6 bg-white">
+    <section id="experience" className="py-12 lg:py-24 bg-white">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-heading font-bold text-text-primary mb-4">
@@ -89,7 +89,7 @@ const ExperienceSection = () => {
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="bg-surface rounded-xl p-8 border border-border transition-all duration-300 hover:shadow-lg hover:border-primary/30"
+              className="bg-surface rounded-xl p-5 lg:p-8 border border-border transition-all duration-300 hover:shadow-lg hover:border-primary/30"
             >
               <div className="flex flex-col lg:flex-row gap-6">
                 <div className="flex-shrink-0">
@@ -109,10 +109,10 @@ const ExperienceSection = () => {
                       </div>
                     </div>
                     <div className="flex flex-col items-start lg:items-end gap-2">
-                      <span className="inline-flex items-center px-4 py-1 bg-primary text-primary-foreground rounded-full text-sm font-semibold">
+                      <span className="inline-flex items-center px-4 py-1 bg-primary text-primary-foreground rounded-full text-sm font-semibold whitespace-nowrap">
                         {exp.period}
                       </span>
-                      <span className="inline-flex items-center px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs font-semibold">
+                      <span className="inline-flex items-center px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs font-semibold whitespace-nowrap">
                         {exp.type}
                       </span>
                     </div>

@@ -73,13 +73,18 @@ const LeadershipSection = () => {
     },
     {
       title: 'Gold Medal, Inter-IIT Snooker Championship (2017)',
-      description: 'Gold Medal, Inter-school Badminton (2008).',
+      description: 'Competitive achievement at the national inter-institutional level.',
+      icon: 'TrophyIcon'
+    },
+    {
+      title: 'Gold Medal, Inter-school Badminton (2008)',
+      description: 'Competitive achievement at the national inter-school level.',
       icon: 'TrophyIcon'
     }
   ];
 
   return (
-    <section id="leadership" className="py-24 px-6 bg-surface">
+    <section id="leadership" className="py-12 lg:py-24 bg-surface">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-heading font-bold text-text-primary mb-4">
@@ -134,7 +139,7 @@ const LeadershipSection = () => {
           <h3 className="text-2xl font-heading font-bold text-text-primary mb-8 text-center">
             Leadership & Recognition
           </h3>
-          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {recognitions.map((item, index) => (
               <div key={index} className="bg-white rounded-xl p-6 border border-border">
                 <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-4">

@@ -78,7 +78,7 @@ const ResearchSection = () => {
   ];
 
   return (
-    <section id="research" className="py-24 px-6 bg-white">
+    <section id="research" className="py-12 lg:py-24 bg-white">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-heading font-bold text-text-primary mb-4">
@@ -130,7 +130,7 @@ const ResearchSection = () => {
                 <div className="flex items-center space-x-4">
                   <div className="text-center">
                   </div>
-                  <span className="inline-flex items-center px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-semibold">
+                  <span className="inline-flex items-center px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-semibold whitespace-nowrap">
                     {pub.type}
                   </span>
                 </div>
