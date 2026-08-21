@@ -5,11 +5,9 @@ import Link from 'next/link';
 import Icon from '@/components/ui/AppIcon';
 
 const FooterSection = () => {
-  const [isHydrated, setIsHydrated] = useState(false);
   const [currentYear, setCurrentYear] = useState('2026');
 
   useEffect(() => {
-    setIsHydrated(true);
     setCurrentYear(new Date().getFullYear().toString());
   }, []);
 
@@ -50,18 +48,6 @@ const FooterSection = () => {
       }
     }
   };
-
-  if (!isHydrated) {
-    return (
-      <footer className="bg-text-primary text-white py-16 px-6">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center">
-            <p className="text-sm opacity-70">© 2026 Dr. Syed Haider Abbas Rizvi. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
-    );
-  }
 
   return (
     <footer className="bg-text-primary text-white py-16 px-6">

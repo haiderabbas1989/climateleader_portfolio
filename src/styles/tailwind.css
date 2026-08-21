@@ -26,16 +26,16 @@
     --color-muted-foreground: #64748b; /* slate-500 */
     
     /* Primary Brand Colors */
-    --color-primary: #2D5A27; /* custom-green-800 */
+    --color-primary: #14213D; /* navy */
     --color-primary-foreground: #ffffff; /* white */
-    
+
     /* Secondary Colors */
-    --color-secondary: #1B4D3E; /* custom-teal-900 */
+    --color-secondary: #2F6F63; /* teal */
     --color-secondary-foreground: #ffffff; /* white */
-    
+
     /* Accent Colors */
-    --color-accent: #4A5D23; /* custom-olive-700 */
-    --color-accent-foreground: #ffffff; /* white */
+    --color-accent: #E8A33D; /* amber */
+    --color-accent-foreground: #14213D; /* navy — white fails contrast on amber */
     
     /* Destructive Colors */
     --color-destructive: #dc2626; /* red-600 */
@@ -56,15 +56,15 @@
     /* Border & Input Colors */
     --color-border: #e2e8f0; /* slate-200 */
     --color-input: #e2e8f0; /* slate-200 */
-    --color-ring: #2D5A27; /* custom-green-800 */
-    
+    --color-ring: #14213D; /* navy */
+
     /* Text Colors */
     --color-text-primary: #1A1A1A; /* custom-gray-900 */
     --color-text-secondary: #4A4A4A; /* custom-gray-600 */
-    
+
     /* Additional Brand Colors */
-    --color-brand-deep: #0F3A2E; /* custom-green-950 */
-    --color-brand-light: #4A5D23; /* custom-olive-700 */
+    --color-brand-deep: #14213D; /* navy */
+    --color-brand-light: #E8A33D; /* amber */
     
     /* Institutional Blue Colors */
     --color-institutional: #1e40af; /* blue-800 */

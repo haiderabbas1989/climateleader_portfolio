@@ -12,7 +12,6 @@ interface ContactForm {
 }
 
 const ContactSection = () => {
-  const [isHydrated, setIsHydrated] = useState(false);
   const [formData, setFormData] = useState<ContactForm>({
     name: '',
     email: '',
@@ -23,8 +22,6 @@ const ContactSection = () => {
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   useEffect(() => {
-    setIsHydrated(true);
-    
     // Load Calendly widget script
     const script = document.createElement('script');
     script.src = 'https://assets.calendly.com/assets/external/widget.js';
@@ -126,23 +123,6 @@ const ContactSection = () => {
       setSubmitStatus('error');
     }
   };
-
-  if (!isHydrated) {
-    return (
-      <section id="contact" className="py-24 px-6 bg-surface">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-heading font-bold text-text-primary mb-4">
-              Contact Gateway
-            </h2>
-            <p className="text-xl text-text-secondary max-w-3xl mx-auto">
-              Multiple touchpoints optimized for different stakeholder types.
-            </p>
-          </div>
-        </div>
-      </section>
-    );
-  }
 
   return (
     <section id="contact" className="py-16 px-6 bg-surface">

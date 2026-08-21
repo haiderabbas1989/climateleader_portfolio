@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import HeroSection from './HeroSection';
 import AboutSection from './AboutSection';
 import EducationSection from './EducationSection';
@@ -12,12 +12,6 @@ import ContactSection from './ContactSection';
 import FooterSection from './FooterSection';
 
 const HomepageInteractive = () => {
-  const [isHydrated, setIsHydrated] = useState(false);
-
-  useEffect(() => {
-    setIsHydrated(true);
-  }, []);
-
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -25,27 +19,8 @@ const HomepageInteractive = () => {
     }
   };
 
-  const handleViewWork = () => {
-    scrollToSection('experience');
-  };
-
-  const handleContact = () => {
-    scrollToSection('contact');
-  };
-
-  if (!isHydrated) {
-    return (
-      <div className="min-h-screen bg-white">
-        <div className="container mx-auto px-6 py-24">
-          <div className="text-center">
-            <h1 className="text-4xl font-heading font-bold text-text-primary mb-4">
-              Loading...
-            </h1>
-          </div>
-        </div>
-      </div>
-    );
-  }
+  const handleViewWork = () => scrollToSection('experience');
+  const handleContact = () => scrollToSection('contact');
 
   return (
     <div className="min-h-screen bg-white">
