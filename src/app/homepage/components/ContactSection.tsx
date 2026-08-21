@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Icon from '@/components/ui/AppIcon';
 
@@ -20,9 +20,32 @@ const ContactSection = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [calendlyVisible, setCalendlyVisible] = useState(false);
+  const calendlyContainerRef = useRef<HTMLDivElement>(null);
 
+  // Observe when the scheduling card scrolls into view
   useEffect(() => {
-    // Load Calendly widget script
+    const node = calendlyContainerRef.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0]?.isIntersecting) {
+          setCalendlyVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '200px' } // start loading slightly before it's actually on-screen
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
+  // Only load the Calendly widget script once the card is visible
+  useEffect(() => {
+    if (!calendlyVisible) return;
+
     const script = document.createElement('script');
     script.src = 'https://assets.calendly.com/assets/external/widget.js';
     script.async = true;
@@ -35,7 +58,7 @@ const ContactSection = () => {
         document.body?.removeChild(script);
       }
     };
-  }, []);
+  }, [calendlyVisible]);
 
   const stakeholderTypes = [
     { value: 'hiring', label: 'Hiring Manager / Recruiter', icon: 'BriefcaseIcon' },
@@ -334,12 +357,24 @@ const ContactSection = () => {
                   Prefer a direct discussion? Book a quick call at a time that works for you.
                 </p>
 
-                <div className="bg-surface rounded-lg overflow-hidden border border-border">
-                  <div
-                    className="calendly-inline-widget"
-                    data-url="https://calendly.com/haiderabbas1989/30min"
-                    style={{ minWidth: 'min(320px, 100%)', height: '360px' }}
-                  />
+                <div
+                  ref={calendlyContainerRef}
+                  className="bg-surface rounded-lg overflow-hidden border border-border"
+                >
+                  {calendlyVisible ? (
+                    <div
+                      className="calendly-inline-widget"
+                      data-url="https://calendly.com/haiderabbas1989/30min"
+                      style={{ minWidth: 'min(320px, 100%)', height: '360px' }}
+                    />
+                  ) : (
+                    <div
+                      style={{ minWidth: 'min(320px, 100%)', height: '360px' }}
+                      className="flex items-center justify-center text-sm text-text-secondary"
+                    >
+                      Loading scheduler…
+                    </div>
+                  )}
                 </div>
               </div>
               {/* Stakeholder-Specific Engagement (Contextual) */}
