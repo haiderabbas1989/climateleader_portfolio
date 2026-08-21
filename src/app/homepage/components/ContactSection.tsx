@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import Icon from '@/components/ui/AppIcon';
 
 interface ContactForm {
@@ -291,15 +292,13 @@ const ContactSection = () => {
                   </div>
                 ))}
               </div>
-              <a
-                href="/assets/resume/dr-haider-rizvi-resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/resume"
                 className="mt-6 flex items-center justify-center space-x-2 w-full px-5 py-3 bg-primary text-primary-foreground rounded-lg font-heading font-semibold transition-all duration-300 hover:bg-primary/90"
               >
                 <span>Download Resume</span>
                 <Icon name="ArrowDownTrayIcon" size={18} variant="outline" />
-              </a>
+              </Link>
             </div>
 
             {/* Professional Networks - moved below Direct Contact */}

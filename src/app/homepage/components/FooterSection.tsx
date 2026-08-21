@@ -36,7 +36,7 @@ const FooterSection = () => {
       links: [
         { label: 'Contact', href: '#contact' },
         { label: 'LinkedIn', href: 'https://linkedin.com/in/-haiderabbas', external: true },
-        { label: 'Resume', href: '/assets/resume/dr-haider-rizvi-resume.pdf', external: true }
+        { label: 'Resume', href: '/resume' }
       ]
     }
   ];

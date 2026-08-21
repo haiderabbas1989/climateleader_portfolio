@@ -1,7 +1,8 @@
 import React from 'react';
+import Link from 'next/link';
 import Icon from '@/components/ui/AppIcon';
 
-const RESUME_HREF = '/assets/resume/dr-haider-rizvi-resume.pdf';
+const RESUME_HREF = '/resume';
 
 const LookingForNextSection = () => {
   const focusAreas = [
@@ -62,15 +63,13 @@ const LookingForNextSection = () => {
         </div>
 
         <div className="text-center">
-          <a
+          <Link
             href={RESUME_HREF}
-            target="_blank"
-            rel="noopener noreferrer"
             className="inline-flex items-center space-x-2 px-8 py-4 bg-primary text-primary-foreground rounded-lg font-heading font-semibold transition-all duration-300 hover:bg-primary/90 hover:shadow-lg hover:-translate-y-0.5"
           >
             <span>Download Resume</span>
             <Icon name="ArrowDownTrayIcon" size={20} variant="outline" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

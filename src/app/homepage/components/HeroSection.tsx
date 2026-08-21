@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import Icon from '@/components/ui/AppIcon';
 import AppImage from '@/components/ui/AppImage';
 
@@ -9,7 +10,7 @@ interface HeroSectionProps {
   onContact: () => void;
 }
 
-const RESUME_HREF = '/assets/resume/dr-haider-rizvi-resume.pdf';
+const RESUME_HREF = '/resume';
 
 const HeroSection = ({ onViewWork, onContact }: HeroSectionProps) => {
   return (
@@ -61,15 +62,13 @@ const HeroSection = ({ onViewWork, onContact }: HeroSectionProps) => {
                 <span>View Experience</span>
                 <Icon name="ArrowRightIcon" size={20} variant="outline" />
               </button>
-              <a
+              <Link
                 href={RESUME_HREF}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="px-8 py-4 bg-white text-primary border-2 border-primary rounded-lg text-base font-heading font-semibold transition-all duration-300 hover:bg-surface hover:shadow-lg hover:-translate-y-0.5 flex items-center space-x-2">
 
                 <span>Download Resume</span>
                 <Icon name="ArrowDownTrayIcon" size={20} variant="outline" />
-              </a>
+              </Link>
             </div>
           </div>
 
